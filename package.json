@@ -1,6 +1,6 @@
 {
   "name": "nth-child",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "Calculate the nth-child equation for CSS selectors",
   "main": "lib/nth-child.js",
   "bin": "./bin/nth-child",
