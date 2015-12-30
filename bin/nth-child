@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+
+var getEquation = require('../lib/nth-child').getEquation;
+var childNumbers = process.argv.slice(2);
+
+function usage() {
+  console.log('\n' +
+              '  Usage: nth-child [options] n1 n2\n\n' +
+              '  Options:\n' +
+              '    -h    usage\n');
+
+  process.exit(0);
+}
+
+if (childNumbers.length === 0 || childNumbers.indexOf('-h') > -1) {
+  usage();
+}
+
+if (childNumbers.length < 2) {
+  console.error('Please provide two child numbers');
+  process.exit(1);
+}
+
+var equation;
+
+try {
+  equation = getEquation(childNumbers[0], childNumbers[1]);
+} catch(e) {
+  console.error(e.message);
+  process.exit(1);
+}
+
+console.log(equation);
