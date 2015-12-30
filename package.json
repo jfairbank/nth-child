@@ -5,7 +5,8 @@
   "main": "lib/nth-child.js",
   "bin": "./bin/nth-child",
   "files": [
-    "src",
+    "nth-child.js",
+    "nth-child.test.js",
     "lib",
     "bin"
   ],
