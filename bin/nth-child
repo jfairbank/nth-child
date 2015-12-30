@@ -7,13 +7,23 @@ function usage() {
   console.log('\n' +
               '  Usage: nth-child [options] n1 n2\n\n' +
               '  Options:\n' +
-              '    -h    usage\n');
+              '    -h    print usage\n' +
+              '    -v    print version\n');
 
+  process.exit(0);
+}
+
+function version() {
+  console.log(require('../package.json').version);
   process.exit(0);
 }
 
 if (childNumbers.length === 0 || childNumbers.indexOf('-h') > -1) {
   usage();
+}
+
+if (childNumbers.indexOf('-v') > -1) {
+  version();
 }
 
 if (childNumbers.length < 2) {
